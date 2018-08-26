@@ -1,0 +1,654 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=10">
+<style>
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+
+body {
+  color: #444;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.slider {
+  height: 80%;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.slider__nav {
+  width: 12px;
+  height: 12px;
+  margin: 2rem 12px;
+  border-radius: 60%;
+  z-index: 10;
+  outline: 6px solid #ccc;
+  outline-offset: -6px;
+  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.slider__nav:checked {
+  -webkit-animation: check 0.4s linear forwards;
+          animation: check 0.4s linear forwards;
+}
+.slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+  left: 0%;
+}
+.slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+  left: -100%;
+}
+.slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+  left: -200%;
+}
+.slider__nav:checked:nth-of-type(4) ~ .slider__inner {
+  left: -300%;
+}
+.slider__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+.slider__contents {
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+div.sliderimg1{
+border-radius:50%;
+}
+.slider__image {
+  font-size: 16px;
+      color: orange;
+}
+.slider__caption {
+  font-size:20px;
+  font-weight: 250;
+  margin: 2em 0 1em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+.slider__txt {
+  color: #999;
+  margin-bottom: 3rem;
+  max-width: 300px;
+}
+
+@-webkit-keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+
+@keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+  }
+
+  *{
+box-sizing:border-box;
+}
+div.gal img{
+border-radius:50%;
+border-style: solid;
+border-color:lightgrey;
+margin-left:18%;
+float:left;
+height:auto;
+width:100px;
+}
+div.b{
+margin-left:13%;
+float:left;
+}
+img.a{
+vertical-align:-105px;
+}
+div.table{
+border:1px solid;
+border-style: ridge;
+margin-left:auto;
+margin-right:auto;
+margin-top:-100px;
+margin-bottom:px;
+height:1600px;
+}
+div.text{
+margin-top:10px;
+margin-left:590px;
+font-size:25px;
+
+	  text-decoration-line:underline;
+	  padding-bottom:20em;
+	  text-decoration-color:orange;
+	  
+
+}
+div.box{
+
+    margin-top: 200px;
+    margin-bottom: 150px;
+    margin-right: 600px;
+    margin-left: 550px;
+	
+	}
+	.get{
+	height:45px;
+	widgth:50px;
+    background-color: orange;
+	padding:10px 35px;
+	text-align:center;
+	font-size:20px;
+	cursor:pointer;
+	color:white;
+	}
+	div.imggal1{
+	margin-left:5px;
+	margin-top:-450px;
+	border:solid #ccc;
+	float:left;
+	width:303px;
+	}
+	div.imggal2{
+	margin-left:500px;
+	margin-top:-450px;
+	border:solid #ccc;
+	float:left;
+	width:303px;
+	}
+	div.imggal3{
+	margin-right:30px;
+	margin-top:-450px;
+	border:solid #ccc;
+	float:right;
+	width:303px;
+	}
+	div.imggal4{
+	margin-left:5px;
+	margin-top:16px;
+	border:solid #ccc;
+	float:left;
+	width:303px;
+	}
+	div.imggal5{
+	margin-left:189px;
+	margin-top:16px;
+	border:solid #ccc;
+	float:left;
+	width:303px;
+	}
+	div.imggal6{
+	margin-RIGHT:26px;
+	margin-top:16px;
+	border:solid #ccc;
+	float:RIGHT;
+	width:303px;
+	}
+	div.imggal7{
+	margin-left:-795px;
+	margin-top:500px;
+	border:solid #ccc;
+	float:left;
+	width:303px;
+	}
+	div.imggal8{
+	margin-left:-300px;
+	margin-top:500px;
+	border:solid #ccc;
+	float:left;
+	width:303px;
+	}
+	
+	div.imggal9{
+	margin-RIGHT:30px;
+	margin-top:65px;
+	border:solid #ccc;
+	float:RIGHT;
+	width:303px;
+	}
+	
+	a:hover{
+	border: 1px solid ;
+	color:lightgrey;
+	}
+	div.desc{
+	padding:15px;
+	text-align:left;
+
+	}
+	div.pic{
+	width:200px;
+	height:auto;
+	}
+	.view{
+	position: absolute;
+    top:1900px;
+	right:637px;
+	background-color:white;
+	border:1px #ccc;
+	padding:15px 32px;
+	text-align:center;
+	font-size:20px;
+	margin: 4px 2px;
+    cursor: pointer;
+	}
+	
+	 div.j {
+  width: 140px;
+  display: block;
+  margin-top:44px;
+	margin-left:583px;
+	font-size:20px;
+}
+div.k{
+margin-top:60px;
+margin-left:580px;
+font-size:20px;
+width:140px;
+}
+div.span {
+  padding-bottom:auto;
+  border-bottom: 3px solid orange;
+  line-height:2px;
+  line-width:auto;
+}
+div.span1 {
+  padding-bottom:auto;
+  border-bottom: 3px solid orange;
+  line-height:2px;
+  line-width:auto;
+}
+div.prev{
+   height:8px;
+   width:12px;
+	margin-top:100px;
+	margin-left:1290px;
+
+}
+div.next{
+   margin-top:-15px;
+	margin-left:--1400px;
+
+}
+div.imglogo1{
+margin-top:-80px;
+margin-left:70px;
+}
+div.imglogo2{
+margin-top:-120px;
+margin-left:290px;
+
+}
+div.imglogo3{
+margin-top:-120px;
+margin-left:560px;
+
+}
+div.imglogo4{
+margin-top:-120px;
+margin-left:790px;
+
+}
+div.imglogo5{
+margin-top:-120px;
+margin-left:1091px;
+
+}
+
+.grayscale 
+{
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+}
+
+
+  .about{
+position: absolute;
+    top:480px;
+	left:25px;
+	background-color:white;
+	border:1px #ccc;
+	padding:15px 32px;
+	text-align:center;
+	font-size:20px;
+	margin: 4px 2px;
+    cursor: pointer;
+}
+	.contact{
+position: absolute;
+    top:480px;
+	left:125px;
+	background-color:white;
+	border:1px #ccc;
+	padding:15px 32px;
+	text-align:center;
+	font-size:20px;
+	margin: 4px 2px;
+    cursor: pointer;
+}
+	
+	.careet{
+position: absolute;
+    top:480px;
+	left:225px;
+	background-color:white;
+	border:1px #ccc;
+	padding:15px 32px;
+	text-align:center;
+	font-size:20px;
+	margin: 4px 2px;
+    cursor: pointer;
+}
+	
+	.team{
+position: absolute;
+    top:480px;
+	left:325px;
+	background-color:white;
+	border:1px #ccc;
+	padding:15px 32px;
+	text-align:center;
+	font-size:20px;
+	margin: 4px 2px;
+    cursor: pointer;
+}
+	
+	.jobs{
+position: absolute;
+    top:480px;
+	left:425px;
+	background-color:white;
+	border:1px #ccc;
+	padding:15px 32px;
+	text-align:center;
+	font-size:20px;
+	margin: 4px 2px;
+    cursor: pointer;
+}
+	
+	.TC{
+position: absolute;
+    top:480px;
+	left:525px;
+	background-color:white;
+	border:1px #ccc;
+	padding:15px 32px;
+	text-align:center;
+	font-size:20px;
+	margin: 4px 2px;
+    cursor: pointer;
+}
+
+.cpy{
+position: absolute;
+    top:480px;
+	left:1100px;
+	background-color:white;
+	border:1px #ccc;
+	padding:15px 32px;
+	text-align:center;
+	font-size:20px;
+	margin: 4px 2px;
+    cursor: pointer;
+}
+
+</style>
+<body>
+<img class="a"  src="download.png" alt="guvilogo" height="75" width="150" >
+<div class="gal">
+<a href="https://www.guvi.in/codekata_level">
+<img  src="2.jpg" alt="manicon" height="200" width="200" >
+</a>
+</div>
+<div class="gal">
+<a href="https://www.guvi.in/register">
+<img  src="3.png" alt="settingicon" height="200" width="200" >
+</a>
+</div>
+<div class="gal">
+<a href="https://www.guvi.in/jobs">
+<img  src="7.png" alt="settingicon" height="300" width="300" >
+</a>
+</div>
+<div class="b">
+<h1>Learn a Skill</h1>
+</div>
+<div class="b">
+<h1>Build Profile</h1>
+</div>
+<div class="b">
+<h1>Get Hired</h1>
+</div>
+<div class="box">
+<a href="https://www.guvi.in/video_info">
+<button class="get">Get Started</button>
+</a>
+</div>
+<div class="table">
+<div class="text">
+<h3>Courses</h3>
+</div>
+<div class="imggal1">
+<a href="https://www.guvi.in/course-detail?course=android">
+<div class="pic">
+<img src="g6.jpg" alt="android" height="170" width="300"></div></a>
+<div class="desc"><p>
+</p>Android is a mobile operating system (OS) based on the Linux kernel and currently developed by Google.
+ Android is designed primarily for touchscreen mobile device. 
+ <h2>RS 3800/-</h2>
+ </div>
+</div>
+<div class="imggal2">
+<a href="https://www.guvi.in/course-detail?course=mysql">
+<div class="pic">
+<img src="g3.jpg" alt="Mysql" height="150" width="300"></div></a>
+<div class="desc"><p>Structured Query Language (SQL) is a programming language used to manage data in a relational database. 
+ SQL can be used to modify, insert and delete in addition to other functions.
+ </p>
+ <h2>RS 1500/-</h2></div>
+</div>
+<div class="imggal3">
+<a href="https://www.guvi.in/course-detail?course=python">
+<div class="pic">
+<img src="g5.jpg" alt="python" height="150" width="290"></div></a>
+<div class="desc"><p>Python is one of the top programming languages
+ and is used by data scientists in a wide range of applications. 
+ Develop your Python programming skills and advance your career
+ </p>
+ <h2>RS 1500/-</h2></div>
+</div>
+<div class="imggal4">
+<a href="https://www.edureka.co/big-data-and-hadoop?gclid=CjwKCAjw_IPcBRAjEiwAl44QkfBYZ8C5TnYeoiiud8vJYFIGV0dgosvyqFs_P7B-8qOoi5lH0hZzsBoC1W0QAvD_BwE">
+<div class="pic">
+<img src="g2.png" alt="android" height="170" width="300"></div></a>
+<div class="desc"><p>Learn key tools and systems for working with big data such as Azure, 
+Hadoop and Spark and learn how to implement NoSQL data storage and processing solutions.
+ </p>
+ <h2>RS 4500/-</h2></div>
+</div>
+<div class="imggal5">
+<a href="https://www.guvi.in/course-detail?course=c">
+<div class="pic">
+<img src="g7.png" alt="C" height="170" width="300"></div></a>
+<div class="desc"><p>C was initially used for system development work, in particular the programs that make-up the operating system. 
+C was adopted as a system development language.
+ </p>
+ <h2>RS 999/-</h2></div>
+</div>
+
+<div class="imggal6">
+<a href="https://www.guvi.in/course-detail?course=cpp">
+<div class="pic">
+<img src="g8.JPG" alt="android" height="170" width="300"></div></a>
+<div class="desc"><p>Everyone may be telling you to learn C++.But the vast majority of people on this
+ planet do not learn C++, and they manage to live quite well despite it. 
+ </p>
+ <h2>RS 1199/-</h2></div>
+</div>
+<div class="imggal7">
+<a href="https://www.guvi.in/course-detail?course=servletjsp_en">
+<div class="pic">
+<img src="g9.jpg" alt="advanced java" height="170" width="300"></div></a>
+<div class="desc"><p>Java is object oriented , compiled and promises WORA ( Write Once Run AnyWhere )
+ Learn servlets and JSP in a easy way with lot of code samples. 
+ </p>
+ <h2>RS 1500/-</h2></div>
+</div>
+<div class="imggal8">
+<a href="https://www.guvi.in/course-detail?course=java_en">
+<div class="pic">
+<img src="g10.png" alt="C++" height="170" width="300"></div></a>
+<div class="desc"><p>Java is object oriented , compiled and promises WORA 
+ which means code once compiled one platform can be easily run in other language.
+ </p>
+ <h2>RS 1500/-</h2></div>
+</div>
+<div class="imggal9">
+<a href="https://www.guvi.in/course-detail?course=php">
+<div class="pic">
+<img src="g11.jpeg" alt="C++" height="170" width="300"></div></a>
+<div class="desc"><p>PHP started out as a small open source project that evolved 
+as more and more people found out how useful it was.  the first version of PHP wayback in 1994.
+ </p>
+ <p><h2>RS 1500/-</h2></p></div>
+</div>
+<a href="https://www.guvi.in/video_info" ><button class="view">View All</button></a>
+</div>
+<div class="j">
+<div class="span"><h3>Trusted By</h3></div>
+</div>
+<div class="prev">
+<a href="">
+<img src="gt.png" alt="previous" height="60px" width="50px">
+</a>
+</div>
+<div class="next">
+<a href="">
+<img src="lt.png" alt="next" height="55px" width="50px">
+</a>
+</div>
+<div class="imglogo1">
+<img class="grayscale" src="i1.png" alt="icon1" height="120px" width="180px">
+</div>
+<div class="imglogo2">
+<img class="grayscale" src="i2.jpg" alt="icon2" height="120px" width="180px">
+</div>
+<div class="imglogo3">
+<img class="grayscale" src="i3.png" alt="icon3" height="120px" width="180px">
+</div>
+<div class="imglogo4">
+<img class="grayscale" src="i4.png" alt="icon4" height="120px" width="180px">
+</div>
+<div class="imglogo5">
+<img class="grayscale" src="i5.jpg" alt="icon5" height="120px" width="180px">
+</div>
+<div class="k">
+<div class="span1"><h3>Testimonials</h3></div>
+</div>
+<div class="slider">
+  <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
+  <input type="radio" name="slider" title="slide2" class="slider__nav"/>
+  <input type="radio" name="slider" title="slide3" class="slider__nav"/>
+  <input type="radio" name="slider" title="slide4" class="slider__nav"/>
+  <div class="slider__inner">
+    <div class="slider__contents"><i class="slider__image fa fa-codepen"></i>
+      <h2 class="slider__caption">Ian – Computer Servicing</h2>
+	  <img src="t1.png" alt="icon" height="150px" width="100px">
+      <p class="slider__txt">
+I have learnt so much. A very valuable and interesting course… I look forward to the next one.
+</p>
+    </div>
+    <div class="slider__contents"><i class="slider__image fa fa-newspaper-o"></i>
+      <h2 class="slider__caption">Willem Ainui, PNG - Networking Foundations</h2>
+	  <img src="t2.jpg" alt="icon" height="150px" width="100px">
+      <p class="slider__txt">
+Yes it is very much because I am learning something new  that I do up here, 
+it has the most up to date basic information in technology. Thanks to guvi for giving me this opportunity.   </p>
+    </div>
+    <div class="slider__contents"><i class="slider__image fa fa-television"></i>
+      <h2 class="slider__caption">
+Pete Rikkochez- Software Engineer</h2>
+	  <img src="t3.jpg" alt="icon" height="150px" width="100px">
+      <p class="slider__txt">The program I've just completed has been an amazing journey. 
+	  The information and knowledge I acquired has been invaluable </p>
+    </div>
+    <div class="slider__contents"><i class="slider__image fa fa-diamond"></i>
+      <h2 class="slider__caption">Alie Gaffan-Director of Training and Development</h2>
+	  <img src="t4.jpg" alt="icon" height="150px" width="100px">
+      <p class="slider__txt">"AHLEI's online training programs are hospitality-specific and cover the fundamentals that are critical to our business. </p>
+    </div>
+  </div>
+
+  <a href="https://www.guvi.in/about_us" ><button class="about" >About.</button></a>
+  <a href="https://www.guvi.in/contact_us"><button class="contact" > Contact.</button></a>
+  <a href="https://www.guvi.in/career" ><button class="careet" >Career.</button></a>
+  <a href="https://www.guvi.in/team" ><button class="team" >Team.</button></a>
+  <a href="https://www.guvi.in/jobs" ><button class="jobs" >Jobs.</button></a>
+  <a href="https://www.guvi.in/terms-of-service" ><button class="TC">Terms and conditions.</button></a>
+  <a href="https://www.guvi.in" ><button class="cpy" >copyright@2018guvi</button></a>
+
+</body>
+</html>
